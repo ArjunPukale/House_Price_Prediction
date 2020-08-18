@@ -17,7 +17,7 @@ sc = load(open('scalar.pkl', 'rb'))
 def predict():
 
     """House Price Prediction
-    This is using docstrings for specifications.
+    Note: Only for houses with Latitude Ranging from: 24.93 - 24.97 , Longitude: 121.47 - 121.54
     ---
     parameters:
         - name: House Age
