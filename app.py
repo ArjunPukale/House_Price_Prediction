@@ -51,10 +51,8 @@ def predict():
     """
     l=[]
     i1=request.args.get('House Age')
-    print('1')
     l.append(i1)
     i2=request.args.get('Distance_to_the_nearest_MRT_station')
-    print('2')
     l.append(i2)
     i3=request.args.get('number_of_convenience_stores')
     l.append(i3)
@@ -63,13 +61,9 @@ def predict():
     i5=request.args.get('Longitude')
     l.append(i5)
     arr = np.array([l])
-    print('3')
     arr = poly.transform(arr)
-    print('4')
     scaled_arr = sc.transform(arr)
-    print('5')
     p = round(loaded_model.predict(scaled_arr)[0][0],2)
-    print('6')
     return "Price of the house per unit area: "+str(p)
 
 
