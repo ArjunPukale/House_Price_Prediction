@@ -1,6 +1,5 @@
 from flask import Flask, request
 import numpy as np
-import joblib
 import flasgger
 from flasgger import Swagger
 from pickle import load
